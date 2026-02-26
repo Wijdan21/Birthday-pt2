@@ -1,0 +1,131 @@
+body {
+    background-color: #0b141a; /* Dark mode background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    width: 380px;
+    height: 600px;
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); /* WA Background */
+    background-color: #0b141a;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Header */
+.chat-header {
+    background-color: #202c33;
+    color: #e9edef;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    background-color: #6a7175;
+    border-radius: 50%;
+    margin: 0 10px;
+    
+    /* Tambahkan dua baris di bawah ini */
+    background-image: url('fotoprofile.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name { font-weight: bold; }
+.status { font-size: 12px; color: #8696a0; }
+
+/* Messages */
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 80%;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.received {
+    background-color: #202c33;
+    color: #e9edef;
+    align-self: flex-start;
+}
+
+.sender-name {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.time {
+    display: block;
+    text-align: right;
+    font-size: 10px;
+    color: #8696a0;
+    margin-top: 4px;
+}
+
+.system-msg {
+    align-self: center;
+    background-color: #182229;
+    color: #ffd279;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+/* Footer */
+.chat-footer {
+    background-color: #202c33;
+    padding: 10px;
+}
+
+.input-area {
+    background-color: #2a3942;
+    color: #8696a0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Animation */
+.fadeIn {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
